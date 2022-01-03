@@ -33,12 +33,16 @@ const components = {
    Link: {
       baseStyle: (props: StyleOptions) => ({
          color: mode('#3d7aed', '#ff63c3')(props),
-         textUnderlineOffset: 3
+         textUnderlineOffset: 3,
+         fontFamily: "'Syne Mono', monospace"
       })
    }
 }
 
-const fonts = {}
+const fonts = {
+   heading: "'Syne Mono', monospace",
+   body: "'Inconsolata', monospace",
+}
 
 const colors = {
    glassTeal: '#88ccca'
@@ -46,7 +50,7 @@ const colors = {
 
 const config = {
    initialColorModeL: 'dark',
-   useSystemColorMode: true
+   // useSystemColorMode: true
 }
 
 export const theme = extendTheme({

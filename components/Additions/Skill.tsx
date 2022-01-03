@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Badge, Flex, Progress} from "@chakra-ui/react";
+import {Badge, Flex, Progress, useColorModeValue} from "@chakra-ui/react";
 
 export const Skill: React.FC<{ skill: string, progressValue: number }> = ({skill, progressValue}) => {
    const [progress, setProgress] = useState<number>(0);
@@ -22,10 +22,10 @@ export const Skill: React.FC<{ skill: string, progressValue: number }> = ({skill
    return (
       <Flex my={2}>
          <Badge textAlign={'center'} minW={{base: '90px', sm: '120px'}} fontSize={{base: 14, sm: 16}}
-                colorScheme={'purple'} mr={2}>
+                colorScheme={useColorModeValue('telegram', 'green')} mr={2}>
             {skill}
          </Badge>
-         <Progress hasStripe w={'100%'} colorScheme={'green'} my={2}
+         <Progress borderRadius={3} w={'100%'} colorScheme={useColorModeValue('telegram', 'green')} my={2}
                    value={progress < progressValue ? progress : progressValue}/>
       </Flex>
    )

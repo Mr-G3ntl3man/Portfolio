@@ -1,27 +1,26 @@
 import React from 'react';
 import {Layout} from "../../components/Layout/Article";
 import {Container, Link, List, ListItem} from "@chakra-ui/react";
-import {Title, WorkImage, WorkInfo} from "../../components/Work";
-import {P} from "../../components/P";
+import {Title, WorkImage, WorkInfo} from "../../components/Additions/Work";
+import {P} from "../../components/Additions/P";
 import {ExternalLinkIcon} from "@chakra-ui/icons";
 
-const SocialNetwork = () => {
+const ToDoList = () => {
    return (
-      <Layout title={'social_network'}>
+      <Layout title={'To_do_list'}>
          <Container maxW={'container.sm'}>
             <Title>
-               Social Network
+               To Do List
             </Title>
             <P>
-               A application for communication and training of junior developers, as well as listening to music using
-               Spotify Web Api.
+               A to-do list app that helps you manage your tasks.
             </P>
 
             <List ml={4} my={4}>
                <ListItem>
                   <WorkInfo>Website</WorkInfo>
-                  <Link target={'_blank'} href='https://mrgentelman.github.io/Social_Network'>
-                     https://mrgentelman.github.io/Social_Network <ExternalLinkIcon mx={'2px'}/> </Link>
+                  <Link target={'_blank'} href='#'>
+                     https://mrgentelman.github.io/ToDo <ExternalLinkIcon mx={'2px'}/> </Link>
                </ListItem>
                <ListItem>
                   <WorkInfo>Stack</WorkInfo>
@@ -29,13 +28,10 @@ const SocialNetwork = () => {
                </ListItem>
             </List>
 
-            <WorkImage src={'/images/works/social_network/profile.jpg'} alt={'social_network profile'}/>
-            <WorkImage src={'/images/works/social_network/spotify.jpg'} alt={'social_network spotify'}/>
-            <WorkImage src={'/images/works/social_network/chat.jpg'} alt={'social_network chat'}/>
-
+            <WorkImage src={'/images/works/todo/main.jpg'} alt={'todo main page'}/>
          </Container>
       </Layout>
    );
 };
 
-export default SocialNetwork;
+export default ToDoList;
