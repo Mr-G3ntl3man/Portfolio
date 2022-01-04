@@ -1,5 +1,5 @@
 import {Box, Text, LinkBox, LinkOverlay} from "@chakra-ui/react"
-import Image from 'next/Image'
+import Image from 'next/image'
 import React from "react";
 import NextLink from "next/link"
 import {Global} from "@emotion/react";
