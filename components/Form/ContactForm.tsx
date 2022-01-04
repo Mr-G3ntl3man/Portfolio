@@ -3,7 +3,7 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {Box, Flex, FormControl, FormHelperText, FormLabel, Input, Textarea} from '@chakra-ui/react';
 import {CustomButton} from "../Additions/CustomButton";
-import {useState} from "react";
+import {useRef, useState} from "react";
 
 export type FormDataType = {
    name: string
@@ -44,21 +44,18 @@ export const ContactForm = () => {
    })
 
    const onSubmit: SubmitHandler<FormDataType> = (data) => {
+      const form = new FormData()
+      form.set('data', JSON.stringify(data))
 
       fetch('./sendTelegram.php', {
          method: 'POST',
-         headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-         },
-         body: JSON.stringify(data)
+         body: form
       })
          .then(res => {
-            console.log(res)
             setShow(true)
             reset()
          })
          .catch(er => {
-            console.log(er)
          })
    }
 
