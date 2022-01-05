@@ -8,6 +8,8 @@ type ButtonT = {
    name: string
    transition: boolean
    href?: string
+   onClick?: () => void
+   disabled?: boolean
 }
 
 export const CustomButton: React.FC<ButtonT> = (
@@ -15,18 +17,20 @@ export const CustomButton: React.FC<ButtonT> = (
       type,
       name,
       transition,
-      href
+      href,
+      onClick,
+      disabled
    }) => {
    const mode = {color: useColorModeValue('#222', '#fff')}
 
    return (transition
       ? <NextLink href={href as string}>
-         <button type={type} className={style.wrapper}>
+         <button disabled={disabled} onClick={onClick} type={type} className={style.wrapper}>
             <span style={mode}>{name}</span>
             <span>{name}</span>
          </button>
       </NextLink>
-      : <button type={type} className={style.wrapper}>
+      : <button disabled={disabled} onClick={onClick} type={type} className={style.wrapper}>
          <span style={mode}>{name}</span>
          <span>{name}</span>
       </button>)

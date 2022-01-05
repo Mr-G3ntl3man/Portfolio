@@ -37,7 +37,7 @@ const Main: React.FC<{ router: NextRouter }> = (props) => {
                pt={20}
                w={[280, 480, 640]}
                mH={200}>
-               <Box fontSize={{base: '50px', sm: '60px'}} w={'100%'} fontFamily={'\'VT323\', monospace;'}>
+               <Box fontSize={{base: '50px', sm: '60px'}} w={'100%'} fontFamily={'\'VT323\', monospace'}>
                   <Typewriter
                      options={{
                         strings: ['Perspective', 'Front-end', 'Developer'],
@@ -49,8 +49,8 @@ const Main: React.FC<{ router: NextRouter }> = (props) => {
 
             {children}
 
-            <Box align="center" opacity={0.4} fontSize="sm">
-               &copy; {new Date().getFullYear()} Mr.Nobody.
+            <Box align="center" opacity={0.4} fontSize="sm" mt={2}>
+               &copy; {new Date().getFullYear()} Mr.Nobody. All rights reserved.
             </Box>
          </Container>
       </Box>

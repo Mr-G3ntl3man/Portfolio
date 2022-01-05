@@ -20,7 +20,7 @@ export const Skill: React.FC<{ skill: string, progressValue: number }> = ({skill
    }, [])
 
    return (
-      <Flex my={2}>
+      <Flex my={4}>
          <Badge textAlign={'center'} minW={{base: '90px', sm: '120px'}} fontSize={{base: 14, sm: 16}}
                 colorScheme={useColorModeValue('telegram', 'green')} mr={2}>
             {skill}

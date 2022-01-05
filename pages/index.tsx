@@ -1,7 +1,6 @@
 import {
    Badge,
    Box,
-   Button,
    Container,
    Heading,
    Image, Link,
@@ -12,7 +11,6 @@ import {
 import {Section} from "../components/Section/Section";
 import {P} from "../components/Additions/P";
 import {Layout} from "../components/Layout/Article";
-import NextLink from "next/link"
 import React from "react";
 import {Skill} from "../components/Additions/Skill";
 import {Slider} from "../components/Additions/SliderPortfolio";
@@ -84,7 +82,6 @@ const App = () => {
                <Skill skill={'HTML5 & CSS3'} progressValue={90}/>
                <Skill skill={'TYPESCRIPT'} progressValue={80}/>
                <Skill skill={'REACT'} progressValue={85}/>
-
             </Section>
 
             <Section delay={'0.3'}>
@@ -93,20 +90,31 @@ const App = () => {
                </Heading>
 
                <List ml={4} my={4}>
-                  <ListItem my={3}>
-                     <Badge fontSize={16} colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2013 -
-                        2015 </Badge>
-                     <span>Kherson Marine College</span>
-                  </ListItem>
-                  <ListItem my={3}>
-                     <Badge fontSize={16} colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2017 -
+                  <ListItem display={{base: 'block', sm: 'flex'}} alignItems={'flex-start'} my={4}>
+                     <Badge fontSize={16}
+                            colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2017 -
                         2020 </Badge>
-                     <span>Educational complex of urban planning Capital</span>
+                     <Box>
+                        <Link
+                           target={'_blank'}
+                           href={'https://stolitsa.mskobr.ru/'}>
+                           Educational complex of urban planning Capital:</Link>
+                        <span style={{display: 'block'}}>Construction and operation of buildings and structures</span>
+                     </Box>
+
                   </ListItem>
-                  <ListItem my={3}>
+                  <ListItem display={{base: 'block', sm: 'flex'}} alignItems={'flex-start'} my={4}>
                      <Badge fontSize={16} colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2020 -
                         2022</Badge>
-                     <span>Moscow Technological Institute</span>
+
+                     <Box>
+                        <Link
+                           target={'_blank'}
+                           href={'https://mti.edu.ru/'}>
+                           Moscow Technological Institute:</Link>
+                        <span style={{display: 'block'}}>Applied Informatics in Economics</span>
+                     </Box>
+
                   </ListItem>
                </List>
             </Section>
@@ -127,13 +135,10 @@ const App = () => {
                <Heading mb={5} as={'h3'} variant={'section-title'}>
                   Contact
                </Heading>
-
                <ContactForm/>
             </Section>
 
-
          </Container>
-
       </Layout>
    )
 }

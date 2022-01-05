@@ -1,0 +1,75 @@
+
+.inputWrap {
+    position: relative;
+}
+
+
+.defaultInput {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid teal;
+    border-radius: 5px;
+    transition: border 0.2s ease-in-out;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 0 10px;
+}
+
+.labelText {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 0 5px;
+    line-height: 15px;
+    background-color: #202023;
+    color: white;
+    font-size: 16px;
+    transition: color 0.2s ease-in, top 0.2s ease-in, font-size 0.2s ease-in, left 0.2s ease-in;
+    pointer-events: none;
+}
+
+.defaultInput:focus {
+    border: 2px solid #0097d9 !important;
+}
+
+.defaultInput:focus ~ .labelText,
+.defaultInput:not(:placeholder-shown) ~ .labelText {
+    top: -8px;
+    left: 5px;
+    font-size: 14px;
+    /*color: rgba(54, 54, 54, 0.41);*/
+    z-index: 10;
+}
+
+.error {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+    bottom: -25px;
+    left: 50%;
+    padding: 0 10px;
+    transform: translate(-50%) scale(1);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    color: yellow;
+}
+
+
+.hideError {
+    top: 0;
+    transform: translate(-50%) scale(0);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.showError {
+    top: -30px;
+    transform: translate(-50%) scale(1);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+
+.blue {
+    background-color: black !important;
+}
