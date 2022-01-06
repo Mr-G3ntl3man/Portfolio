@@ -101,12 +101,11 @@ const App = () => {
                            Educational complex of urban planning Capital:</Link>
                         <span style={{display: 'block'}}>Construction and operation of buildings and structures</span>
                      </Box>
-
                   </ListItem>
+
                   <ListItem display={{base: 'block', sm: 'flex'}} alignItems={'flex-start'} my={4}>
                      <Badge fontSize={16} colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2020 -
                         2022</Badge>
-
                      <Box>
                         <Link
                            target={'_blank'}
@@ -114,7 +113,6 @@ const App = () => {
                            Moscow Technological Institute:</Link>
                         <span style={{display: 'block'}}>Applied Informatics in Economics</span>
                      </Box>
-
                   </ListItem>
                </List>
             </Section>
@@ -127,13 +125,13 @@ const App = () => {
                <Slider/>
 
                <Box align={'center'} my={6}>
-                  <CustomButton transition={true} href={'/works'} name={'My portfolio'}/>
+                  <CustomButton transition={true} href={'/works'} name={'Portfolio'}/>
                </Box>
             </Section>
 
             <Section delay={'0.4'}>
                <Heading mb={5} as={'h3'} variant={'section-title'}>
-                  Contact
+                  Get in touch
                </Heading>
                <ContactForm/>
             </Section>
