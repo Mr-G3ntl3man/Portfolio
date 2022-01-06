@@ -106,7 +106,7 @@ export const ContactForm = () => {
             onClose={() => setShowModal(state => !state)}>
             <ModalOverlay/>
             <ModalContent mx={5} py={5} textAlign={'center'}>
-               <ModalHeader> {error
+               <ModalHeader mt={4}> {error
                   ? <Flex justify={'center'} alignItems={'center'}>
                      The application has not been sent!
                      <WarningIcon w={'30px'} h={'30px'} color={'red.400'} ml={2}/>
@@ -149,7 +149,6 @@ export const ContactForm = () => {
                      {!!errors.name && <div className={themeErrorClassName}>{errors.name?.message}</div>}
                   </Box>
 
-
                   <Box position="relative" h={'40px'} w={{base: 'auto', md: '300px'}} m={2} mb={{base: 8, md: 3}}>
                      <input
                         style={{borderColor: errors.email && themeErrorStyle}}
@@ -174,14 +173,16 @@ export const ContactForm = () => {
 
                <Box position="relative" h={'150px'} mx={2} my={5}>
                   <textarea
-                     style={{borderColor: errors.email && themeErrorStyle}}
+                     style={{
+                        padding: '10px',
+                        borderColor: errors.email && themeErrorStyle
+                     }}
                      placeholder=' '
                      className={themeInputClassName}
                      {...register("message", {required: true})}/>
                   <label className={style.labelText}>Message: *</label>
                   {!!errors.message && <div className={themeErrorClassName}>{errors.message?.message}</div>}
                </Box>
-
 
                <Box my={7} align={'center'}>
                   <CustomButton

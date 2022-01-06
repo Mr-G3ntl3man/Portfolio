@@ -77,14 +77,14 @@
     color: #202023;
 }
 
-
 .darkAutofill:-webkit-autofill,
 .darkAutofill:-webkit-autofill:hover,
 .darkAutofill:-webkit-autofill:focus,
 .darkAutofill:-webkit-autofill:active {
     -webkit-text-fill-color: #f0e7db;
-    -webkit-box-shadow: 0 0 0 1000px #202023 inset;
-    transition: background-color 0.2s ease-in-out;
+    -webkit-box-shadow: 0 0 0 1000px #202023 inset !important;
+    background-color: #202023 !important;
+    background-clip: content-box !important;
 }
 
 .lightAutofill:-webkit-autofill,
@@ -92,8 +92,9 @@
 .lightAutofill:-webkit-autofill:focus,
 .lightAutofill:-webkit-autofill:active {
     -webkit-text-fill-color: #202023;
-    -webkit-box-shadow: 0 0 0 1000px #f0e7db inset;
-    transition: background-color 0.2s ease-in-out;
+    -webkit-box-shadow: 0 0 0 1000px #f0e7db inset !important;
+    background-color: #f0e7db !important;
+    background-clip: content-box !important;
 }
 
 .errorDark {
