@@ -3,7 +3,6 @@
     position: relative;
 }
 
-
 .defaultInput {
     height: 100%;
     width: 100%;
@@ -17,6 +16,7 @@
     font-size: 18px;
     letter-spacing: 1px;
     padding: 0 10px;
+    resize: none;
 }
 
 .labelText {
@@ -34,8 +34,6 @@
 
 .defaultInput:focus {
     border: 1px solid #0097d9 !important;
-    box-shadow: none;
-    outline: none;
 }
 
 .defaultInput:focus ~ .labelText,
@@ -59,19 +57,49 @@
 }
 
 
-.hideError {
-    top: 0;
-    transform: translate(-50%) scale(0);
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+.dark {
+    border-color: #f0e7db;
+    color: #f0e7db;
 }
 
-.showError {
-    top: -30px;
-    transform: translate(-50%) scale(1);
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+.dark + .labelText {
+    background-color: #202023;
+    color: #f0e7db;
+}
+
+.light {
+    border-color: #202023;
+    color: #202023;
+}
+
+.light + .labelText {
+    background-color: #f0e7db;
+    color: #202023;
 }
 
 
-.blue {
-    background-color: black !important;
+.darkAutofill:-webkit-autofill,
+.darkAutofill:-webkit-autofill:hover,
+.darkAutofill:-webkit-autofill:focus,
+.darkAutofill:-webkit-autofill:active {
+    -webkit-text-fill-color: #f0e7db;
+    -webkit-box-shadow: 0 0 0 1000px #202023 inset;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.lightAutofill:-webkit-autofill,
+.lightAutofill:-webkit-autofill:hover,
+.lightAutofill:-webkit-autofill:focus,
+.lightAutofill:-webkit-autofill:active {
+    -webkit-text-fill-color: #202023;
+    -webkit-box-shadow: 0 0 0 1000px #f0e7db inset;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.errorDark {
+    color: yellow;
+}
+
+.errorLight {
+    color: tomato;
 }

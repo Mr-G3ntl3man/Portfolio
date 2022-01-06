@@ -4,11 +4,10 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import {
    Box,
    Flex,
-   FormControl, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay,
-   Textarea, useColorModeValue,
+   FormControl, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useColorModeValue,
 } from '@chakra-ui/react';
 import {CustomButton} from "../Additions/CustomButton";
-import React, {ChangeEvent, CSSProperties, useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 import {Spinner} from "../Additions/Spinner";
 import {CheckCircleIcon, WarningIcon} from '@chakra-ui/icons';
 import style from "../../styles/Input.module.css";
@@ -27,18 +26,9 @@ export const ContactForm = () => {
    const [loading, setLoading] = useState<boolean>(false)
    const [error, setError] = useState<boolean>(false)
 
-   const inputStyle: CSSProperties = {
-      borderColor: useColorModeValue('#202023', '#f0e7db'),
-      color: useColorModeValue('#202023', '#f0e7db'),
-   }
-   const labelStyle: CSSProperties = {
-      backgroundColor: useColorModeValue('#f0e7db', '#202023'),
-      color: useColorModeValue('#202023', '#f0e7db'),
-   }
-
-   const errorStyle: CSSProperties = {
-      color: useColorModeValue('tomato', 'yellow'),
-   }
+   const themeInputClassName = `${style.defaultInput} ${useColorModeValue(`${style.lightAutofill} ${style.light}`, `${style.darkAutofill} ${style.dark}`)}`
+   const themeErrorStyle = useColorModeValue(`tomato`, `yellow`)
+   const themeErrorClassName = `${style.error} ${useColorModeValue(`${style.errorLight}`, `${style.errorDark}`)}`
 
    const schema = yup.object().shape({
       name: yup
@@ -115,15 +105,15 @@ export const ContactForm = () => {
             isOpen={showModal}
             onClose={() => setShowModal(state => !state)}>
             <ModalOverlay/>
-            <ModalContent py={5} textAlign={'center'}>
+            <ModalContent mx={5} py={5} textAlign={'center'}>
                <ModalHeader> {error
                   ? <Flex justify={'center'} alignItems={'center'}>
                      The application has not been sent!
-                     <WarningIcon color={'red.400'} ml={2}/>
+                     <WarningIcon w={'30px'} h={'30px'} color={'red.400'} ml={2}/>
                   </Flex>
                   : <Flex justify={'center'} alignItems={'center'}>
                      Application submitted!
-                     <CheckCircleIcon color={'green.400'} ml={2}/>
+                     <CheckCircleIcon w={'30px'} h={'30px'} color={'green.400'} ml={2}/>
                   </Flex>
                } </ModalHeader>
                <ModalCloseButton/>
@@ -135,7 +125,6 @@ export const ContactForm = () => {
                      </>
                      : 'Thank you for submitting your application. I will contact you soon.'}
                </ModalBody>
-
             </ModalContent>
          </Modal>
 
@@ -152,52 +141,45 @@ export const ContactForm = () => {
                <Box display={{base: 'block', md: 'flex'}} alignItems={'center'} justifyContent={'space-between'} mb={2}>
                   <Box h={'40px'} position="relative" w={{base: 'auto', md: '300px'}} m={2} mb={{base: 8, md: 3}}>
                      <input
-                        style={inputStyle}
+                        style={{borderColor: errors.name && themeErrorStyle}}
                         placeholder=' '
-                        className={style.defaultInput}
+                        className={themeInputClassName}
                         {...register("name", {required: true})}/>
-                     <label style={labelStyle} className={style.labelText}>Name</label>
-                     {!!errors.name && <div style={errorStyle} className={style.error}>{errors.name?.message}</div>}
+                     <label className={style.labelText}>Name: *</label>
+                     {!!errors.name && <div className={themeErrorClassName}>{errors.name?.message}</div>}
                   </Box>
 
 
                   <Box position="relative" h={'40px'} w={{base: 'auto', md: '300px'}} m={2} mb={{base: 8, md: 3}}>
                      <input
-                        style={inputStyle}
+                        style={{borderColor: errors.email && themeErrorStyle}}
                         placeholder=' '
-                        className={style.defaultInput}
+                        className={themeInputClassName}
                         {...register("email", {required: true})}/>
-                     <label style={labelStyle} className={style.labelText}>Email</label>
-                     {!!errors.email && <div style={errorStyle} className={style.error}>{errors.email?.message}</div>}
+                     <label className={style.labelText}>Email: *</label>
+                     {!!errors.email && <div className={themeErrorClassName}>{errors.email?.message}</div>}
                   </Box>
                </Box>
 
                <Box position="relative" h={'40px'} mx={2} my={5} mb={{base: 7, md: 0}}>
                   <input
-                     style={inputStyle}
                      placeholder=' '
                      type={'tel'}
-                     className={style.defaultInput}
+                     className={themeInputClassName}
                      {...register("tel", {required: false})}
-                     onChange={onChangeHandler}
-                  />
-                  <label style={labelStyle} className={style.labelText}>Telephone</label>
-                  {!!errors.tel && <div style={errorStyle} className={style.error}>{errors.tel?.message}</div>}
+                     onChange={onChangeHandler}/>
+                  <label className={style.labelText}>Telephone:</label>
+                  {!!errors.tel && <div className={themeErrorClassName}>{errors.tel?.message}</div>}
                </Box>
 
                <Box position="relative" h={'150px'} mx={2} my={5}>
-                  <Textarea
-                     style={{
-                        ...inputStyle,
-                        resize: 'none',
-                        height: '150px',
-                        borderWidth: '1px'
-                     }}
+                  <textarea
+                     style={{borderColor: errors.email && themeErrorStyle}}
                      placeholder=' '
-                     className={style.defaultInput}
+                     className={themeInputClassName}
                      {...register("message", {required: true})}/>
-                  <label style={labelStyle} className={style.labelText}>Message</label>
-                  {!!errors.message && <div style={errorStyle} className={style.error}>{errors.message?.message}</div>}
+                  <label className={style.labelText}>Message: *</label>
+                  {!!errors.message && <div className={themeErrorClassName}>{errors.message?.message}</div>}
                </Box>
 
 
