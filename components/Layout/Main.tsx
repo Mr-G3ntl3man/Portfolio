@@ -22,11 +22,10 @@ const Main: React.FC<{ router: NextRouter }> = (props) => {
          <Navbar path={router.asPath}/>
 
          <Container maxW={'container.md'}>
-            <Particle/>
 
-            {/*<NoSsr>*/}
-            {/*   <Planet3D/>*/}
-            {/*</NoSsr>*/}
+            <NoSsr>
+               <Particle/>
+            </NoSsr>
 
             <Box
                display='flex'

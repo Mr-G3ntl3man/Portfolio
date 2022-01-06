@@ -107,7 +107,7 @@ export const ContactForm = () => {
 
    return (
       <>
-         {loading && <Spinner/>}
+         {!loading && <Spinner/>}
 
          <Modal
             motionPreset='slideInBottom'

@@ -21,12 +21,18 @@ export const Skill: React.FC<{ skill: string, progressValue: number }> = ({skill
 
    return (
       <Flex my={4}>
-         <Badge textAlign={'center'} minW={{base: '90px', sm: '120px'}} fontSize={{base: 14, sm: 16}}
-                colorScheme={useColorModeValue('telegram', 'green')} mr={2}>
+         <Badge
+            textAlign={'center'}
+            minW={{base: '90px', sm: '120px'}}
+            fontSize={{base: 14, sm: 16}}
+            colorScheme={useColorModeValue('telegram', 'green')} mr={2}>
             {skill}
          </Badge>
-         <Progress borderRadius={3} w={'100%'} colorScheme={useColorModeValue('telegram', 'green')} my={2}
-                   value={progress < progressValue ? progress : progressValue}/>
+         <Progress
+            borderRadius={3}
+            w={'100%'}
+            colorScheme={useColorModeValue('telegram', 'green')} my={2}
+            value={progress < progressValue ? progress : progressValue}/>
       </Flex>
    )
 }
