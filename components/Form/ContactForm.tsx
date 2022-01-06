@@ -175,7 +175,7 @@ export const ContactForm = () => {
                   <textarea
                      style={{
                         padding: '10px',
-                        borderColor: errors.email && themeErrorStyle
+                        borderColor: errors.message && themeErrorStyle
                      }}
                      placeholder=' '
                      className={themeInputClassName}
