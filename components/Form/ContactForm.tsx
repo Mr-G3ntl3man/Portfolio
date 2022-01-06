@@ -14,6 +14,14 @@ import {CheckCircleIcon, WarningIcon} from '@chakra-ui/icons';
 import style from "../../styles/Input.module.css";
 import parsePhoneNumberFromString from "libphonenumber-js";
 
+
+export type FormDataType = {
+   name: string
+   tel: number
+   email: string
+   message: string
+}
+
 export const ContactForm = () => {
    const [showModal, setShowModal] = useState<boolean>(false)
    const [loading, setLoading] = useState<boolean>(false)
@@ -207,10 +215,3 @@ export const ContactForm = () => {
    )
 }
 
-
-export type FormDataType = {
-   name: string
-   tel: number
-   email: string
-   message: string
-}

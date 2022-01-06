@@ -28,10 +28,6 @@ export const Particle = () => (
             "interactivity": {
                "detectsOn": "window",
                "events": {
-                  "onClick": {
-                     "enable": true,
-                     "mode": "push"
-                  },
                   "resize": true
                },
                "modes": {
