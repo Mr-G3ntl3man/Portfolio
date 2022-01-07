@@ -91,9 +91,13 @@ const App = () => {
 
                <List ml={4} my={4}>
                   <ListItem display={{base: 'block', sm: 'flex'}} alignItems={'flex-start'} my={4}>
-                     <Badge fontSize={16}
-                            colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2017 -
-                        2020 </Badge>
+                     <Badge
+                        textAlign={'center'}
+                        w={'120px'}
+                        fontSize={16}
+                        colorScheme={useColorModeValue('telegram', 'green')}
+                        mr={2}>
+                        2017 - 2020 </Badge>
                      <Box>
                         <Link
                            target={'_blank'}
@@ -104,7 +108,7 @@ const App = () => {
                   </ListItem>
 
                   <ListItem display={{base: 'block', sm: 'flex'}} alignItems={'flex-start'} my={4}>
-                     <Badge fontSize={16} colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2020 -
+                     <Badge w={'120px'} fontSize={16} colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2020 -
                         Present</Badge>
                      <Box>
                         <Link
