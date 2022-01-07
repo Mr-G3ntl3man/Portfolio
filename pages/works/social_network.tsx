@@ -20,8 +20,8 @@ const SocialNetwork = () => {
             <List ml={4} my={4}>
                <ListItem>
                   <WorkInfo>Website</WorkInfo>
-                  <Link target={'_blank'} href='https://mrgentelman.github.io/Social_Network'>
-                     https://mrgentelman.github.io/Social_Network <ExternalLinkIcon mx={'2px'}/> </Link>
+                  <Link target={'_blank'} href='https://mr-g3ntl3man.github.io/Social_Network'>
+                     https://mr-g3ntl3man.github.io/Social_Network<ExternalLinkIcon mx={'2px'}/> </Link>
                </ListItem>
                <ListItem>
                   <WorkInfo>Stack</WorkInfo>
