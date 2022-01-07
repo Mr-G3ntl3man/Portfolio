@@ -93,7 +93,7 @@ const App = () => {
                   <ListItem display={{base: 'block', sm: 'flex'}} alignItems={'flex-start'} my={4}>
                      <Badge
                         textAlign={'center'}
-                        w={'130px'}
+                        mW={'130px'}
                         fontSize={16}
                         colorScheme={useColorModeValue('telegram', 'green')}
                         mr={2}>
@@ -109,7 +109,7 @@ const App = () => {
 
                   <ListItem display={{base: 'block', sm: 'flex'}} alignItems={'flex-start'} my={4}>
                      <Badge textAlign={'center'}
-                            w={'130px'}
+                            mW={'130px'}
                             fontSize={16}
                             colorScheme={useColorModeValue('telegram', 'green')} mr={2}>
                         2020 - Present</Badge>
