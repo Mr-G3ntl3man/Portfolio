@@ -105,7 +105,7 @@ const App = () => {
 
                   <ListItem display={{base: 'block', sm: 'flex'}} alignItems={'flex-start'} my={4}>
                      <Badge fontSize={16} colorScheme={useColorModeValue('telegram', 'green')} mr={2}>2020 -
-                        2022</Badge>
+                        Present</Badge>
                      <Box>
                         <Link
                            target={'_blank'}
