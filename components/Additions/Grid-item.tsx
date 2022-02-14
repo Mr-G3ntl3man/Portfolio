@@ -52,7 +52,7 @@ export const WorkGridItem: React.FC<{ id: string, title: string, imgSrc: StaticI
 export const GridItemStyle = () => (
    <Global styles={`
       .grid-item-image{
-      border-radius: 12px
+      border-radius: 12px;
       }
    `}/>
 )

@@ -21,7 +21,7 @@ const SocialNetwork = () => {
                <ListItem>
                   <WorkInfo>Website</WorkInfo>
                   <Link target={'_blank'} href='https://mr-g3ntl3man.github.io/Social_Network'>
-                     https://mr-g3ntl3man.github.io/Social_Network<ExternalLinkIcon mx={'2px'}/> </Link>
+                     mr-g3ntl3man.github.io/Social_Network<ExternalLinkIcon mx={'2px'}/> </Link>
                </ListItem>
                <ListItem>
                   <WorkInfo>Stack</WorkInfo>

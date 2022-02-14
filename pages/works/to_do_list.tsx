@@ -20,7 +20,7 @@ const ToDoList = () => {
                <ListItem>
                   <WorkInfo>Website</WorkInfo>
                   <Link target={'_blank'} href='https://mr-g3ntl3man.github.io/To_Do_List'>
-                     https://mr-g3ntl3man.github.io/To_Do_List <ExternalLinkIcon mx={'2px'}/> </Link>
+                     mr-g3ntl3man.github.io/To_Do_List <ExternalLinkIcon mx={'2px'}/> </Link>
                </ListItem>
                <ListItem>
                   <WorkInfo>Stack</WorkInfo>

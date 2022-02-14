@@ -7,6 +7,7 @@ import {Planet3D} from "../Planet3d";
 import NoSsr from "../no-ssr";
 import {Particle} from "../Additions/Particles";
 import Typewriter from "typewriter-effect";
+import {Slider} from "../Additions/SliderPortfolio";
 
 
 const Main: React.FC<{ router: NextRouter }> = (props) => {
@@ -22,11 +23,6 @@ const Main: React.FC<{ router: NextRouter }> = (props) => {
          <Navbar path={router.asPath}/>
 
          <Container maxW={'container.md'}>
-
-            <NoSsr>
-               <Particle/>
-            </NoSsr>
-
             <Box
                display='flex'
                justify='center'
@@ -37,19 +33,20 @@ const Main: React.FC<{ router: NextRouter }> = (props) => {
                w={[280, 480, 640]}
                mH={200}>
                <Box fontSize={{base: '50px', sm: '60px'}} w={'100%'} fontFamily={'\'VT323\', monospace'}>
-                  <Typewriter
-                     options={{
-                        strings: ['Perspective', 'Front-end', 'Developer'],
-                        autoStart: true,
-                        loop: true,
-                     }}/>
+                  {/*<Typewriter*/}
+                  {/*   options={{*/}
+                  {/*      strings: ['Perspective', 'Front-end', 'Developer'],*/}
+                  {/*      autoStart: true,*/}
+                  {/*      loop: true,*/}
+                  {/*   }}/>*/}
+                  {/*<Slider/>*/}
                </Box>
             </Box>
 
             {children}
 
             <Box align="center" opacity={0.4} fontSize="sm" mt={2}>
-               &copy; {new Date().getFullYear()} Mr.Nobody. All rights reserved.
+               &copy; {new Date().getFullYear()} Mr.G3ntl3man. All rights reserved.
             </Box>
          </Container>
       </Box>

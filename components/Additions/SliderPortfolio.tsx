@@ -33,7 +33,7 @@ export const Slider = () => (
                   alt={'social_network'}
                   loading={'lazy'}
                   minH={'200px'}
-                  src={'/images/works/social_network/main.jpg'}/>
+                  src={'/images/works/social_network/profile.jpg'}/>
             </LinkBox>
          </NextLink>
       </SwiperSlide>
@@ -53,28 +53,15 @@ export const Slider = () => (
       </SwiperSlide>
 
       <SwiperSlide className={'slide'}>
-         <NextLink href={'works/to_do_list'}>
+         <NextLink href={'works/learning_cards'}>
             <LinkBox cursor={'pointer'}>
                <Image
                   borderRadius={10}
                   objectFit={'cover'}
                   loading={'lazy'}
                   minH={'200px'}
-                  alt={'to_do_list'}
-                  src={'/images/works/todo/main.jpg'}/>
-            </LinkBox>
-         </NextLink>
-      </SwiperSlide>
-
-      <SwiperSlide className={'slide'}>
-         <NextLink href={'works/to_do_list'}>
-            <LinkBox cursor={'pointer'}>
-               <Image
-                  borderRadius={10}
-                  objectFit={'cover'}
-                  minH={'200px'}
-                  alt={'to_do_list'}
-                  src={'/images/works/todo/main.jpg'}/>
+                  alt={'learning_cards'}
+                  src={'/images/works/learning_cards/L_C-Profile.png'}/>
             </LinkBox>
          </NextLink>
       </SwiperSlide>
