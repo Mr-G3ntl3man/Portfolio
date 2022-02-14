@@ -1,8 +1,9 @@
-import {Container, Heading, SimpleGrid, Divider} from '@chakra-ui/react'
+import {Container, Heading, SimpleGrid} from '@chakra-ui/react'
 import {Section} from '../components/Section/Section'
 import {WorkGridItem} from '../components/Additions/Grid-item'
-import socialNetwork from '../public/images/works/social_network/main.jpg'
+import socialNetwork from '../public/images/works/social_network/profile.jpg'
 import toDoList from '../public/images/works/todo/main.jpg'
+import learningCards from '../public/images/works/learning_cards/L_C-Profile.png'
 import {Layout} from "../components/Layout/Article";
 
 const Works = () => (
@@ -12,7 +13,19 @@ const Works = () => (
             Works
          </Heading>
          <SimpleGrid column={1} gap={6}>
+
             <Section delay={'0.2'}>
+               <WorkGridItem
+                  imgSrc={learningCards}
+                  title={'Learning Cards'}
+                  id={'learning_cards'}>
+                  A card learning app where you can create your own decks and cards to study and review material and
+                  learn
+                  from other people's cards.
+               </WorkGridItem>
+            </Section>
+
+            <Section delay={'0.4'}>
                <WorkGridItem
                   imgSrc={socialNetwork}
                   title={'Social Network'}
@@ -22,7 +35,7 @@ const Works = () => (
                </WorkGridItem>
             </Section>
 
-            <Section delay={'0.4'}>
+            <Section delay={'0.6'}>
                <WorkGridItem
                   imgSrc={toDoList}
                   title={'To Do List'}
