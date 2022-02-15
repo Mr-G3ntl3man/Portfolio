@@ -52,7 +52,7 @@ const App = () => {
                         borderRadius={'full'}
                         borderStyle={'solid'}
                         display={'inline-block'}
-                        src={'/images/avatar.jpg'}
+                        src={'/images/CV/me.jpg'}
                         alt={'avatar'}/>
                   </Box>
                </Box>
