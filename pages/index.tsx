@@ -69,7 +69,7 @@ const App = () => {
                </P>
 
                <Box align={'center'} my={2}>
-                  <Link display={'inline-block'} href={'/images/CV/Arthur_P_CV.pdf'} download>
+                  <Link display={'inline-block'} href={'/images/CV/CV.pdf'} download>
                      <CustomButton transition={false} name={'Download CV'}/>
                   </Link>
                </Box>
