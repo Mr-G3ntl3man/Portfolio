@@ -6,9 +6,9 @@ import {
    Flex,
    FormControl, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useColorModeValue,
 } from '@chakra-ui/react';
-import {CustomButton} from "../Additions/CustomButton";
+import {CustomButton} from "../common/CustomButton";
 import React, {ChangeEvent, useState} from "react";
-import {Spinner} from "../Additions/Spinner";
+import {Spinner} from "../common/Spinner";
 import {CheckCircleIcon, WarningIcon} from '@chakra-ui/icons';
 import style from "../../styles/Input.module.css";
 import parsePhoneNumberFromString from "libphonenumber-js";

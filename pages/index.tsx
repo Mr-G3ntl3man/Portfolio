@@ -8,13 +8,13 @@ import {
    ListItem,
    useColorModeValue
 } from "@chakra-ui/react";
-import {Section} from "../components/Section/Section";
-import {P} from "../components/Additions/P";
+import {Section} from "../components/common/Section";
+import {P} from "../components/common/P";
 import {Layout} from "../components/Layout/Article";
 import React from "react";
-import {Skill} from "../components/Additions/Skill";
-import {Slider} from "../components/Additions/SliderPortfolio";
-import {CustomButton} from "../components/Additions/CustomButton";
+import {Skill} from "../components/common/Skill";
+import {Slider} from "../components/common/SliderPortfolio";
+import {CustomButton} from "../components/common/CustomButton";
 import {ContactForm} from "../components/Form/ContactForm";
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
             <Box
                borderRadius={"lg"}
                bg={useColorModeValue('whiteAlpha.600', 'whiteAlpha.200')}
-               p={3} align="center" m={6}>
+               p={3} align="center" m={{base: 2, md: 6}}>
                Hello, I&apos;m a front-end developer based in Moscow!
             </Box>
 
@@ -80,7 +80,7 @@ const App = () => {
                   Skills
                </Heading>
                <Skill skill={'HTML5 & CSS3'} progressValue={90}/>
-               <Skill skill={'TYPESCRIPT'} progressValue={80}/>
+               <Skill skill={'JAVASCRIPT'} progressValue={80}/>
                <Skill skill={'REACT'} progressValue={85}/>
             </Section>
 

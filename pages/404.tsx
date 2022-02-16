@@ -1,6 +1,5 @@
-import {Box, Button, Container, Divider, Heading, Text} from "@chakra-ui/react";
-import NextLink from "next/link";
-import {CustomButton} from "../components/Additions/CustomButton";
+import {Box, Container, Divider, Heading, Text} from "@chakra-ui/react";
+import {CustomButton} from "../components/common/CustomButton";
 import React from "react";
 
 const NotFound = () => (

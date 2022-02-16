@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from '../Additions/Logo'
+import Logo from './Logo'
 import NextLink from "next/link"
 import {HamburgerIcon} from '@chakra-ui/icons'
 import {
@@ -15,7 +15,7 @@ import {
    IconButton,
    useColorModeValue, MenuList
 } from '@chakra-ui/react'
-import ThemeToggleBtn from "../Additions/Theme-toggle-btn";
+import ThemeToggleBtn from "./Theme-toggle-btn";
 import {IoLogoGithub} from 'react-icons/io5'
 
 const LinkItem: React.FC<{ href: string, path: string }> = (props) => {

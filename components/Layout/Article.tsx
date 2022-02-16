@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion'
 import Head from 'next/head'
 import React from "react";
-import {GridItemStyle} from "../Additions/Grid-item";
+import {GridItemStyle} from "../common/Grid-item";
 
 const variants = {
    hidden: {opacity: 0, x: 0, y: 20},

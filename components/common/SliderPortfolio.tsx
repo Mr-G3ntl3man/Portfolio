@@ -6,7 +6,6 @@ import {Autoplay} from "swiper"
 import 'swiper/css'
 import 'swiper/css/autoplay'
 
-
 export const Slider = () => (
    <Swiper
       lazy={true}

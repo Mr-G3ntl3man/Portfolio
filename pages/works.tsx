@@ -1,6 +1,6 @@
 import {Container, Heading, SimpleGrid} from '@chakra-ui/react'
-import {Section} from '../components/Section/Section'
-import {WorkGridItem} from '../components/Additions/Grid-item'
+import {Section} from '../components/common/Section'
+import {WorkGridItem} from '../components/common/Grid-item'
 import socialNetwork from '../public/images/works/social_network/profile.jpg'
 import toDoList from '../public/images/works/todo/main.jpg'
 import learningCards from '../public/images/works/learning_cards/L_C-Profile.png'
@@ -8,7 +8,7 @@ import {Layout} from "../components/Layout/Article";
 
 const Works = () => (
    <Layout>
-      <Container maxW={'container.md'}>
+      <Container mt={'20px'} maxW={'container.md'}>
          <Heading as={'h3'} fontSize={20} mb={4}>
             Works
          </Heading>

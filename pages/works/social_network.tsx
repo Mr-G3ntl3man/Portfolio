@@ -1,8 +1,8 @@
 import React from 'react';
 import {Layout} from "../../components/Layout/Article";
 import {Container, Link, List, ListItem} from "@chakra-ui/react";
-import {Title, WorkImage, WorkInfo} from "../../components/Additions/Work";
-import {P} from "../../components/Additions/P";
+import {Title, WorkImage, WorkInfo} from "../../components/common/Work";
+import {P} from "../../components/common/P";
 import {ExternalLinkIcon} from "@chakra-ui/icons";
 
 const SocialNetwork = () => {
