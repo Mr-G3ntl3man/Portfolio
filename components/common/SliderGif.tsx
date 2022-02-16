@@ -13,6 +13,7 @@ const SlideImage: React.FC<{ src: string }> = ({src}) => (
       alt={'developer coding process'}
       loading={'lazy'}
       maxH={'300px'}
+      h={'100%'}
       w={{base: '100%', md: '80%'}}
       src={src}/>
 )
